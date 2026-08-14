@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Ranjini ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff0f5;
+            color: #4a1025;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           LOADING SCREEN
+        ========================= */
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #4b071c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            transition: 1s;
+        }
+
+        #loader h1 {
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            font-size: 50px;
+        }
+
+        #loader p {
+            color: #ffb6c9;
+            margin-top: 10px;
+        }
+
+        .loader-heart {
+            font-size: 60px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        /* =========================
+           MUSIC BUTTON
+        ========================= */
+
+        #musicBtn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background: #ff3d78;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 5000;
+            box-shadow: 0 5px 25px rgba(255, 61, 120, .5);
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(75, 7, 28, .75);
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        nav .logo span {
+            color: #ff4f83;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #ff76a0;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(50, 0, 18, .72),
+                    rgba(50, 0, 18, .72)
+                ),
+                url("photos/photo1.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            color: white;
+            padding: 30px;
+            max-width: 800px;
+        }
+
+        .hero-content .small {
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: #ffc1d2;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(65px, 12vw, 120px);
+            line-height: .9;
+            margin: 20px 0;
+            color: #fff;
+            text-shadow: 0 0 30px rgba(255, 80, 130, .7);
+        }
+
+        .hero h1 span {
+            color: #ff4f83;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .love-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            color: #ffd1dd;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+
+            border-radius: 50px;
+
+            background: #ff3d78;
+            color: white;
+
+            text-decoration: none;
+            font-weight: 600;
+
+            transition: .3s;
+
+            box-shadow: 0 10px 30px rgba(255, 61, 120, .35);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            background: #ff1f65;
+        }
+
+        /* =========================
+           FLOATING HEARTS
+        ========================= */
+
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 20px;
+            animation: floatHeart linear forwards;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 55px;
+            color: #c2185b;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            color: #8d5267;
+        }
+
+        /* =========================
+           MEMORY GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .photo {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+
+            box-shadow: 0 10px 30px rgba(130, 20, 60, .15);
+
+            transition: .4s;
+        }
+
+        .photo:nth-child(even) {
+            transform: translateY(20px) rotate(2deg);
+        }
+
+        .photo:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+
+        .photo:hover {
+            transform: translateY(-15px) scale(1.05) rotate(0);
+            z-index: 5;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .photo p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            text-align: center;
+            padding: 10px 5px;
+        }
+
+        /* =========================
+           LETTER
+        ========================= */
+
+        .letter-section {
+            background: #4b071c;
+            color: white;
+        }
+
+        .letter {
+            max-width: 900px;
+            margin: auto;
+
+            background: #fff7f9;
+            color: #5b1930;
+
+            padding: 55px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+
+            position: relative;
+        }
+
+        .letter:before {
+            content: "💌";
+            position: absolute;
+            font-size: 50px;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .letter h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            margin-bottom: 25px;
+            color: #c2185b;
+        }
+
+        .letter p {
+            line-height: 2;
+            margin-bottom: 18px;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            text-align: right;
+            color: #c2185b;
+        }
+
+        /* =========================
+           REASONS
+        ========================= */
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .reason {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 30px rgba(130, 20, 60, .12);
+
+            transition: .3s;
+        }
+
+        .reason:hover {
+            transform: translateY(-10px);
+        }
+
+        .reason .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .reason h3 {
+            margin-bottom: 10px;
+            color: #c2185b;
+        }
+
+        .reason p {
+            line-height: 1.7;
+            color: #755365;
+        }
+
+        /* =========================
+           SURPRISE
+        ========================= */
+
+        .surprise {
+            min-height: 80vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(40, 0, 15, .85),
+                    rgba(40, 0, 15, .85)
+                ),
+                url("photos/photo5.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .surprise-content {
+            max-width: 800px;
+        }
+
+        .surprise h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #ff7198;
+
+            border: 2px solid #ff7198;
+            border-radius: 30px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 0 20px rgba(255, 113, 152, .5),
+                inset 0 0 20px rgba(255, 113, 152, .1);
+
+            margin: 30px 0;
+        }
+
+        .answer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .answer-buttons button {
+            border: none;
+            padding: 15px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            background: #ff3d78;
+        }
+
+        .answer-buttons button:hover {
+            transform: scale(1.08);
+        }
+
+        #answer {
+            display: none;
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 35px;
+            color: #ffd0dc;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #25000d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        footer .love {
+            color: #ff4f83;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 900px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reasons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo:nth-child(even),
+            .photo:nth-child(odd) {
+                transform: none;
+            }
+
+            .photo img {
+                height: 330px;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+            }
+
+            .letter {
+                padding: 35px 25px;
+            }
+
+            .question {
+                font-size: 38px;
+            }
+
+            .surprise h2 {
+                font-size: 45px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     LOADING SCREEN
+========================= -->
+
+<div id="loader">
+
+    <div class="loader-heart">❤️</div>
+
+    <h1>For Ranjini...</h1>
+
+    <p>A little surprise from Arnab 💕</p>
+
+</div>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="music" loop>
+   <iframe
+    width="1"
+    height="1"
+    src="https://www.youtube.com/embed/joi0iB2NZXc?autoplay=1&loop=1&playlist=joi0iB2NZXc"
+    title="Birthday Music"
+    frameborder="0"
+    allow="autoplay; encrypted-media">
+</iframe> type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        Arnab <span>♥</span>
+    </div>
+
+    <ul>
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#memories">Memories</a></li>
+
+        <li><a href="#letter">Letter</a></li>
+
+        <li><a href="#reasons">Reasons</a></li>
+
+        <li><a href="#surprise">Surprise</a></li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small">
+            ✨ TODAY IS YOUR SPECIAL DAY ✨
+        </div>
+
+        <h1>
+            Happy Birthday<br>
+            <span>Ranjini</span> ❤️
+        </h1>
+
+        <p>
+            To the most beautiful person who makes my world
+            brighter, happier and more meaningful.
+        </p>
+
+        <div class="love-text">
+            I love you endlessly. ❤️
+        </div>
+
+        <a href="#memories" class="btn">
+            Open Your Surprise 💌
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section id="memories">
+
+    <div class="section-title">
+
+        <h2>Our Beautiful Memories 📸</h2>
+
+        <p>
+            Every moment with you is a memory I want to keep forever.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="photo">
+
+            <img src="photos/IMG-20231225-WA0059.jpg">
+
+            <p>Our beautiful moment ❤️</p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img src="photos/IMG-20240214-WA0082.jpg">
+
+            <p>One of my favorite memories 💕</p>
+
+        </div>
+
+
+        <div class="photo">
+
+           <img src="photos/IMG-20240407-WA0003.jpg">
+
+            <p>Just you and me ✨</p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img src="photos/IMG_20231107_130727.jpg">
+
+            <p>A moment I'll never forget 🌹</p>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img src="photos/IMG_20240501_082051.jpg">
+            
+            <p>Forever my favorite person ❤️</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="letter-section" id="letter">
+
+    <div class="section-title">
+
+        <h2 style="color:#ff9ab5;">
+            A Letter For You 💌
+        </h2>
+
+    </div>
+
+
+    <div class="letter">
+
+        <h3>
+            My Dearest Ranjini,
+        </h3>
+
+
+        <p>
+            Today is not just another day. Today is the day
+            the world was blessed with someone incredibly special —
+            <b>you.</b>
+        </p>
+
+
+        <p>
+            I feel lucky to have you in my life. Your smile can
+            make even my ordinary days feel special, and your
+            presence makes everything around me a little brighter.
+        </p>
+
+
+        <p>
+            Thank you for every conversation, every laugh,
+            every beautiful memory and every little moment
+            that we've shared together.
+        </p>
+
+
+        <p>
+            On your birthday, I wish you endless happiness,
+            success, good health and everything your heart desires.
+            I hope all your dreams come true.
+        </p>
+
+
+        <p>
+            And most importantly, I hope that I get to be there
+            beside you for many more birthdays, creating many
+            more beautiful memories together.
+        </p>
+
+
+        <p>
+            Happy Birthday, Ranjini. ❤️
+            You are truly one of the most precious people in my life.
+        </p>
+
+
+        <div class="signature">
+
+            With all my love,<br>
+
+            Arnab ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REASONS
+========================= -->
+
+<section id="reasons">
+
+    <div class="section-title">
+
+        <h2>Reasons I Love You ❤️</h2>
+
+        <p>
+            There are too many reasons to fit on one page...
+        </p>
+
+    </div>
+
+
+    <div class="reasons">
+
+
+        <div class="reason">
+
+            <div class="icon">
+                😊
+            </div>
+
+            <h3>Your Smile</h3>
+
+            <p>
+                Your smile has a magical way of making
+                even my hardest days feel better.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="icon">
+                💖
+            </div>
+
+            <h3>Your Heart</h3>
+
+            <p>
+                You have such a beautiful and caring heart,
+                and that's something I deeply admire.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="icon">
+                🌸
+            </div>
+
+            <h3>Your Kindness</h3>
+
+            <p>
+                The way you care about people makes you
+                even more beautiful.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="icon">
+                🫶
+            </div>
+
+            <h3>You Understand Me</h3>
+
+            <p>
+                Somehow you understand the things
+                I can't always explain.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="icon">
+                ✨
+            </div>
+
+            <h3>You Make Me Happy</h3>
+
+            <p>
+                Even a simple moment with you can
+                become my favorite part of the day.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="icon">
+                ♾️
+            </div>
+
+            <h3>My Favorite Person</h3>
+
+            <p>
+                Because no matter what happens,
+                you'll always have a special place in my heart.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL SURPRISE
+========================= -->
+
+<section class="surprise" id="surprise">
+
+    <div class="surprise-content">
+
+        <h2>
+            One Last Question... 💕
+        </h2>
+
+
+        <div class="question">
+
+            Will you always be mine? ❤️
+
+        </div>
+
+
+        <div class="answer-buttons">
+
+            <button onclick="sayYes()">
+                Yes, Always! 💕
+            </button>
+
+            <button onclick="sayYes()">
+                Forever & Always 💖
+            </button>
+
+        </div>
+
+
+        <div id="answer">
+
+            You just made my heart the happiest. ❤️<br>
+
+            I promise to treasure you and our memories.
+            <br><br>
+
+            Forever & Always. 💍❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        Happy Birthday, Ranjini! 🎂❤️
+    </p>
+
+    <p>
+        You mean the world to me.
+    </p>
+
+    <p>
+        Made with <span class="love">♥</span> by Arnab
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* =========================
+       LOADER
+    ========================= */
+
+    window.addEventListener("load", function() {
+
+        setTimeout(function() {
+
+            document.getElementById("loader").style.opacity = "0";
+
+            setTimeout(function() {
+
+                document.getElementById("loader").style.display = "none";
+
+            }, 1000);
+
+        }, 1800);
+
+    });
+
+
+    /* =========================
+       MUSIC
+    ========================= */
+
+    const music = document.getElementById("music");
+
+    const musicBtn = document.getElementById("musicBtn");
+
+    let playing = false;
+
+
+    function toggleMusic() {
+
+        if (playing) {
+
+            music.pause();
+
+            musicBtn.innerHTML = "🎵";
+
+            playing = false;
+
+        } else {
+
+            music.play().then(function() {
+
+                musicBtn.innerHTML = "⏸️";
+
+                playing = true;
+
+            }).catch(function() {
+
+                alert(
+                    "Please click the music button again to start the music."
+                );
+
+            });
+
+        }
+
+    }
+
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
+    function createHeart() {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        const hearts = [
+            "❤️",
+            "💖",
+            "💕",
+            "💗",
+            "💓",
+            "🌹",
+            "✨"
+        ];
+
+        heart.innerHTML =
+            hearts[Math.floor(Math.random() * hearts.length)];
+
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+
+        heart.style.animationDuration =
+            (5 + Math.random() * 5) + "s";
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(function() {
+
+            heart.remove();
+
+        }, 10000);
+
+    }
+
+
+    setInterval(createHeart, 500);
+
+
+    /* =========================
+       FINAL ANSWER
+    ========================= */
+
+    function sayYes() {
+
+        document.getElementById("answer").style.display = "block";
+
+        for (let i = 0; i < 30; i++) {
+
+            setTimeout(createHeart, i * 100);
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
