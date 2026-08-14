@@ -621,7 +621,11 @@
 </iframe> type="audio/mpeg">
 </audio>
 
-<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+<button class="music-btn" id="musicBtn" onclick="playMusic()">
+    🎵
+</button>
+
+<div id="musicPlayer"></div>
 
 
 <!-- =========================
@@ -744,7 +748,7 @@
         <div class="photo">
 
             <img src="photos/IMG_20240501_082051.jpg">
-            
+
             <p>Forever my favorite person ❤️</p>
 
         </div>
@@ -1154,6 +1158,33 @@
     }
 
 </script>
+<script>
+let musicPlaying = false;
 
+function playMusic() {
+    const player = document.getElementById("musicPlayer");
+    const button = document.getElementById("musicBtn");
+
+    if (!musicPlaying) {
+        player.innerHTML = `
+            <iframe
+                width="1"
+                height="1"
+                src="https://www.youtube.com/embed/joi0iB2NZXc?autoplay=1&loop=1&playlist=joi0iB2NZXc"
+                title="Our Song ❤️"
+                frameborder="0"
+                allow="autoplay; encrypted-media">
+            </iframe>
+        `;
+
+        button.innerHTML = "🔊";
+        musicPlaying = true;
+    } else {
+        player.innerHTML = "";
+        button.innerHTML = "🎵";
+        musicPlaying = false;
+    }
+}
+</script>
 </body>
 </html>
